@@ -1,26 +1,23 @@
 @use '../../assets/scss/abstracts/variables' as var;
 @use '../../assets/scss/abstracts/functions' as func;
-@use '../../assets/scss/abstracts/mixins' as mix;
 
 .card {
-	@include mix.flexbox;
-	@include mix.flex-direction(column);
+	display: flex;
+	flex-direction: column;
 	width: 100%;
 	margin: func.em(40, var.$font-size-primary) 0
 		func.em(60, var.$font-size-primary);
 	background-color: var.$color-white;
-	@include mix.border-radius(8px);
-	@include mix.box-shadow(
-		0 func.em(16, var.$font-size-primary)
-			func.em(30, var.$font-size-primary) rgba(0, 0, 0, 0.04)
-	);
+	border-radius: 8px;
+	box-shadow: 0 func.em(16, var.$font-size-primary)
+		func.em(30, var.$font-size-primary) rgba(0, 0, 0, 0.04);
 	overflow: hidden;
 }
 
 .card-group,
 .card-block {
-	@include mix.flexbox;
-	@include mix.flex-direction(column);
+	display: flex;
+	flex-direction: column;
 }
 
 .card-block {
@@ -56,8 +53,8 @@ h3.card-title {
 }
 
 .card-price {
-	@include mix.flexbox;
-	@include mix.align-items(center);
+	display: flex;
+	align-items: center;
 	margin-top: func.em(-6, var.$font-size-primary);
 	font-size: func.em(16, var.$font-size-primary);
 }
@@ -108,7 +105,7 @@ h3.card-title {
 	}
 
 	.card-group {
-		@include mix.flex-direction(row);
+		flex-direction: row;
 	}
 
 	.card-group .card-block {
