@@ -1,10 +1,11 @@
 import styles from './Card.module.scss';
+import CardSection from './CardSection';
 
 const Card = () => {
 	return (
 		<div className={styles.card}>
-			<section
-				className={`${styles['card-block']} ${styles['card-block--join-community']}`}>
+			<CardSection
+				customClass={`${styles['card-block--join-community']}`}>
 				<h2 className={styles['card-title']}>Join our community</h2>
 				<mark className={styles['card-mark']}>
 					30-day, hassle-free money back guarantee
@@ -14,10 +15,10 @@ const Card = () => {
 					expert code reviews. Perfect for any developers who are
 					serious about honing their skills.
 				</p>
-			</section>
+			</CardSection>
 			<div className={styles['card-group']}>
-				<section
-					className={`${styles['card-block']} ${styles['card-block--monthly-subsription']}`}>
+				<CardSection
+					customClass={`${styles['card-block--monthly-subsription']}`}>
 					<h3 className={styles['card-title']}>
 						Monthly Subscription
 					</h3>
@@ -30,12 +31,11 @@ const Card = () => {
 					</p>
 					<a
 						href="#/"
-						className={`${styles.btn} btn btn--primary btn--full`}>
+						className={`${styles['card-btn']} btn btn--primary btn--full`}>
 						Sign Up
 					</a>
-				</section>
-				<section
-					className={`${styles['card-block']} ${styles['card-block--why-us']}`}>
+				</CardSection>
+				<CardSection customClass={`${styles['card-block--why-us']}`}>
 					<h3 className={styles['card-title']}>Why Us</h3>
 					<ul className={styles['card-list']}>
 						<li>Tutorials by industry experts</li>
@@ -46,7 +46,7 @@ const Card = () => {
 						<li>Flashcard decks</li>
 						<li>New videos every week</li>
 					</ul>
-				</section>
+				</CardSection>
 			</div>
 		</div>
 	);

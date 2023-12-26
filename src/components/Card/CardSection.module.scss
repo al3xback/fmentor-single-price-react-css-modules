@@ -1,0 +1,16 @@
+@use '../../assets/scss/abstracts/variables' as var;
+@use '../../assets/scss/abstracts/functions' as func;
+
+.card-block {
+	display: flex;
+	flex-direction: column;
+	padding: func.em(26, var.$font-size-primary)
+		func.em(24, var.$font-size-primary);
+}
+
+@media (min-width: 48em) {
+	.card-block {
+		padding: func.em(38, var.$font-size-primary)
+			func.em(40, var.$font-size-primary);
+	}
+}

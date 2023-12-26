@@ -5,7 +5,6 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	background-color: var.$color-white;
 	margin: func.em(40, var.$font-size-primary) 0
 		func.em(60, var.$font-size-primary);
 	border-radius: 8px;
@@ -14,15 +13,13 @@
 	overflow: hidden;
 }
 
-.card-group,
-.card-block {
-	display: flex;
-	flex-direction: column;
+.card-block--join-community {
+	background-color: var.$color-white;
 }
 
-.card-block {
-	padding: func.em(26, var.$font-size-primary)
-		func.em(24, var.$font-size-primary);
+.card-group {
+	display: flex;
+	flex-direction: column;
 }
 
 h2.card-title {
@@ -74,7 +71,7 @@ h3.card-title {
 	font-size: func.em(15, var.$font-size-primary);
 }
 
-.card-block .btn {
+.card-btn {
 	font-size: func.em(16, var.$font-size-primary);
 }
 
@@ -91,11 +88,6 @@ h3.card-title {
 		max-width: func.em(640, var.$font-size-primary);
 	}
 
-	.card-block {
-		padding: func.em(38, var.$font-size-primary)
-			func.em(40, var.$font-size-primary);
-	}
-
 	h2.card-title {
 		font-size: func.em(24, var.$font-size-primary);
 	}
@@ -108,7 +100,8 @@ h3.card-title {
 		flex-direction: row;
 	}
 
-	.card-group .card-block {
+	.card-block--monthly-subsription,
+	.card-block--why-us {
 		width: 50%;
 	}
 }
