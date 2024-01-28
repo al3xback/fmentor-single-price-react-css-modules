@@ -1,15 +1,19 @@
 @use '../../assets/scss/abstracts/variables' as var;
 @use '../../assets/scss/abstracts/functions' as func;
 
-.card {
+.card,
+.card-group,
+.card-list {
 	display: flex;
 	flex-direction: column;
+}
+
+.card {
 	width: 100%;
 	margin: func.em(40, var.$font-size-primary) 0
 		func.em(60, var.$font-size-primary);
 	border-radius: 8px;
-	box-shadow: 0 func.em(16, var.$font-size-primary)
-		func.em(30, var.$font-size-primary) rgba(0, 0, 0, 0.04);
+	box-shadow: 0 16px 30px rgba(0, 0, 0, 0.04);
 	overflow: hidden;
 }
 
@@ -17,17 +21,16 @@
 	background-color: var.$color-white;
 }
 
-.card-group {
-	display: flex;
-	flex-direction: column;
-}
-
 h2.card-title {
 	margin-bottom: func.em(20, 20);
 }
 
-.card-mark {
+.card-subtitle {
+	background-color: transparent;
 	margin-bottom: func.em(16, 15);
+	font-size: func.em(15, var.$font-size-primary);
+	font-weight: var.$font-weight-700;
+	color: var.$color-bright-yellow;
 	line-height: 1.3;
 }
 
@@ -76,11 +79,8 @@ h3.card-title {
 }
 
 .card-list {
+	gap: func.em(3, var.$font-size-primary);
 	line-height: 1.4;
-}
-
-.card-list li + li {
-	margin-top: func.em(3, var.$font-size-primary);
 }
 
 @media (min-width: 48em) {
@@ -92,7 +92,7 @@ h3.card-title {
 		font-size: func.em(24, var.$font-size-primary);
 	}
 
-	.card-mark {
+	.card-subtitle {
 		font-size: func.em(18, var.$font-size-primary);
 	}
 

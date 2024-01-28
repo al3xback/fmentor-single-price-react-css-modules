@@ -7,9 +7,9 @@ const Card = () => {
 			<CardSection
 				customClass={`${styles['card-block--join-community']}`}>
 				<h2 className={styles['card-title']}>Join our community</h2>
-				<mark className={styles['card-mark']}>
+				<p className={styles['card-subtitle']}>
 					30-day, hassle-free money back guarantee
-				</mark>
+				</p>
 				<p className={styles['card-desc']}>
 					Gain access to our full library of tutorials along with
 					expert code reviews. Perfect for any developers who are
